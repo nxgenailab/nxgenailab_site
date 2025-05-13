@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nxgenailab_site/static/css/main.9574c18c.css",
+    "main.js": "/nxgenailab_site/static/js/main.0aa87350.js",
+    "index.html": "/nxgenailab_site/index.html",
+    "main.9574c18c.css.map": "/nxgenailab_site/static/css/main.9574c18c.css.map",
+    "main.0aa87350.js.map": "/nxgenailab_site/static/js/main.0aa87350.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9574c18c.css",
+    "static/js/main.0aa87350.js"
+  ]
+}
