@@ -16,8 +16,7 @@ jobs:
       - name: Decode Google Service Account Key
         run: |
           set -x
-          abc=$(echo -n '${{ secrets.GOOGLE_SA_KEY }}' | base64)
-          echo $abc
+          abc=$(echo -n '${{ secrets.GOOGLE_SA_KEY }}' | base64 | tr -d '\n')
           echo "ENCODED_SECRET=$abc" >> $GITHUB_ENV
         shell: bash
 
