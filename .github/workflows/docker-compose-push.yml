@@ -16,8 +16,8 @@ jobs:
       - name: Decode Google Service Account Key
         run: |
           set -x
-          abc=$(echo -n '${{ secrets.GOOGLE_SA_KEY }}' | base64 | tr -d '\n')
-          echo "ENCODED_SECRET=$abc" >> $GITHUB_ENV
+          ENCODED_SECRET=$(echo -n '${{ secrets.GOOGLE_SA_KEY }}' | base64 | tr -d '\n')
+          echo "ENCODED_SECRET=$ENCODED_SECRET" >> $GITHUB_ENV
         shell: bash
 
       - name: Log in to Docker Hub

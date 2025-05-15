@@ -5,6 +5,7 @@ from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 import os
+import base64
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -31,10 +32,23 @@ RANGE = 'Sheet1!A:B'  # Adjust range as needed
 SERVICE_ACCOUNT_FILE = 'sa.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
+def get_decoded_secret():
+    encoded = os.getenv("ENCODED_SECRET")
+    if not encoded:
+        raise ValueError("ENCODED_SECRET environment variable is not set")
+
+    try:
+        decoded_bytes = base64.b64decode(encoded)
+        decoded_str = decoded_bytes.decode('utf-8')
+        return decoded_str
+    except Exception as e:
+        raise ValueError(f"Failed to decode ENCODED_SECRET: {e}")
+
 # Authenticate with Google Sheets API
 def get_sheets_service():
-    creds = Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+    decoded_json = get_decoded_secret()
+    creds = Credentials.from_service_account_info(
+        eval(decoded_json), scopes=SCOPES)
     return build('sheets', 'v4', credentials=creds)
 
 # Define a POST endpoint to handle form submission
