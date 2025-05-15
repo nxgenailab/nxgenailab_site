@@ -40,13 +40,19 @@ jobs:
         run: |
           docker tag nxgenailab_site_fastapi:latest ${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_fastapi:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_fastapi:latest
-          - name: Deploy to Google Cloud Run
-            run: |
-              gcloud auth activate-service-account --key-file=<(echo ${{ secrets.GOOGLE_SA_KEY }} | base64 --decode)
-              gcloud config set project nxgenailab
-              gcloud run deploy nxgenailab-site-fastapi \
-            --image=${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_fastapi:latest \
-            --platform=managed \
-            --region=us-east1 \
-            --allow-unauthenticated
-            shell: bash
+
+      - name: Setup Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          service_account_key: ${{ secrets.GOOGLE_SA_KEY }}
+          project_id: nxgenailab
+
+      - name: Deploy to Google Cloud Run
+        run: |
+          gcloud config set project nxgenailab
+          gcloud run deploy nxgenailab-site-fastapi \
+          --image=${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_fastapi:latest \
+          --platform=managed \
+          --region=us-east1 \
+          --allow-unauthenticated
+        shell: bash
