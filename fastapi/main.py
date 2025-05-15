@@ -29,7 +29,7 @@ SHEET_ID = '1fsUVSKD-t9ynB22oIGtP5uFbfzt_NCKs8LV1nYOYVYs'  # Replace with your G
 RANGE = 'Sheet1!A:B'  # Adjust range as needed
 
 # Load the credentials from your downloaded JSON key
-SERVICE_ACCOUNT_FILE = 'sa.json'
+# SERVICE_ACCOUNT_FILE = 'sa.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 def get_decoded_secret():
