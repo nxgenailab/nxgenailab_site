@@ -11,7 +11,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-        const response = await fetch("http://localhost:3001/submit", {
+        const response = await fetch("https://nxgenailab-site-fastapi-751892319793.us-east1.run.app/submit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
