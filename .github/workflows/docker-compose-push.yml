@@ -16,9 +16,9 @@ jobs:
       - name: Decode Google Service Account Key
         run: |
           set -x
-          echo -n '{"name":"Alice","age":30}' | base64
-          ENCODED_SECRET=$(cat decoded.json | base64)
-          echo "ENCODED_SECRET=$ENCODED_SECRET" >> $GITHUB_ENV
+          abc=$(echo -n '{"name":"Alice","age":30}' | base64)
+          echo $abc
+          echo "ENCODED_SECRET=$abc" >> $GITHUB_ENV
         shell: bash
 
       - name: Set up Docker Compose
