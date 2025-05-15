@@ -57,5 +57,6 @@ jobs:
           --image=${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_fastapi:latest \
           --platform=managed \
           --region=us-east1 \
-          --allow-unauthenticated
+          --allow-unauthenticated \
+          --set-env-vars ENCODED_SECRET="$ENCODED_SECRET"
         shell: bash
