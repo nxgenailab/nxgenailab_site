@@ -49,6 +49,7 @@ jobs:
 
       - name: Deploy to Google Cloud Run
         run: |
+          gcloud auth activate-service-account --key-file=${{ secrets.GOOGLE_SA_KEY }}
           gcloud config set project nxgenailab
           gcloud run deploy nxgenailab-site-fastapi \
           --image=${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_fastapi:latest \
