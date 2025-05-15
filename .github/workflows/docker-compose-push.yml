@@ -49,8 +49,7 @@ jobs:
 
       - name: Deploy to Google Cloud Run
         run: |
-          echo "$ENCODED_SECRET" | base64 --decode > /tmp/google_sa_key.json
-          gcloud auth activate-service-account --key-file=/tmp/google_sa_key.json
+          gcloud auth activate-service-account --key-file=${{ secrets.GOOGLE_SA_KEY }}
           gcloud config set project nxgenailab
           gcloud run deploy nxgenailab-site-fastapi \
           --image=${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_fastapi:latest \
