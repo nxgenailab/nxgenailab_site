@@ -10,8 +10,8 @@ services:
       - "3001:3001"
     volumes:
       - ./fastapi:/app
-    environment:
-      - GOOGLE_APPLICATION_CREDENTIALS=/fastapi/sa.json
+    # environment:
+    #   - GOOGLE_APPLICATION_CREDENTIALS=/fastapi/sa.json
     command: uvicorn main:app --host 0.0.0.0 --port 3001 --reload
 
   react:

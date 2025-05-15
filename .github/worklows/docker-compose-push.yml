@@ -1,0 +1,40 @@
+name: Run Shell Script and Docker Compose
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run shell script
+        run: |
+            echo ${{ secrets.GOOGLE_SA_KEY }} | base64 -d > decoded.json
+            ENCODED_SECRET=$(cat decoded.json | base64)
+            echo "ENCODED_SECRET=$ENCODED_SECRET" >> $GITHUB_ENV
+
+      - name: Set up Docker Compose
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+      - name: Build Docker images
+        run: |
+          docker-compose build
+
+      - name: Tag and push React image
+        run: |
+          docker tag nxgenailab_site_react:latest ${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_react:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_react:latest
+
+      - name: Tag and push FastAPI image
+        run: |
+          docker tag nxgenailab_site_fastapi:latest ${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_fastapi:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_fastapi:latest
