@@ -25,7 +25,7 @@ jobs:
 
       - name: Build React Docker image
         run: |
-            docker build -t nxgenailab_site_react --build-arg REACT_APP_MAINTENANCE_WINDOW=true ./react
+          docker build -t nxgenailab_site_react ./react
 
       - name: Build FastAPI Docker image
         run: |
