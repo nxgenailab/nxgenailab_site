@@ -25,7 +25,7 @@ jobs:
 
       - name: Build React Docker image
         run: |
-            docker build -t nxgenailab_site_react --build-arg REACT_APP_MAINTENANCE_WINDOW=false ./react
+            docker build -t nxgenailab_site_react ./react
 
       - name: Build FastAPI Docker image
         run: |
@@ -66,6 +66,5 @@ jobs:
           --image=${{ secrets.DOCKERHUB_USERNAME }}/nxgenailab_site_react:latest \
           --platform=managed \
           --region=us-east1 \
-          --allow-unauthenticated \
-          --set-env-vars REACT_APP_MAINTENANCE_WINDOW=false
+          --allow-unauthenticated 
         shell: bash
