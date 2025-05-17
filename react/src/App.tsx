@@ -13,7 +13,7 @@ import ApplyPage from './components/ApplyPage';
 import Maintenance from './components/Maintenance';
 
 function App() {
-  const isMaintenance = process.env.REACT_APP_MAINTENANCE_WINDOW2 === 'true';
+  const isMaintenance = process.env.REACT_APP_MAINTENANCE_WINDOW === 'true';
 
   return (
     <Router>
