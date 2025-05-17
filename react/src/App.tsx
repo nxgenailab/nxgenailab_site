@@ -10,44 +10,37 @@ import Footer from './components/Footer';
 import AboutUs from './components/AboutUs';
 import OurMissionSection from './components/OurMission';
 import ApplyPage from './components/ApplyPage';
-import Maintenance from './components/Maintenance';
+import MaintenanceScreen from './components/Maintenance';
 
 function App() {
-  const isMaintenance = process.env.REACT_APP_MAINTENANCE_WINDOW === 'true';
-
   return (
     <Router>
       <div className="relative">
-        {isMaintenance ? (
-          <Maintenance />
-        ) : (
-          <>
-            {/* Fancy Background */}
-            <FancyBackground />
+        <MaintenanceScreen />
+        {/* Fancy Background */}
+        <FancyBackground />
 
-            {/* Header */}
-            <Header />
+        {/* Header */}
+        <Header />
 
-            {/* Routes */}
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <div className="relative z-5">
-                    <HeroSection />
-                    <OurMissionSection />
-                    <WhyJoin />
-                    <WorkshopSection />
-                    <AboutUs />
-                    <ResourcesSection />
-                    <Footer />
-                  </div>
-                }
-              />
-              <Route path="/apply" element={<ApplyPage />} />
-            </Routes>
-          </>
-        )}
+        {/* Routes */}
+        <Routes>
+          {/* <Route
+            path="/"
+            element={
+              <div className="relative z-5">
+                <HeroSection />
+                <OurMissionSection />
+                <WhyJoin />
+                <WorkshopSection />
+                <AboutUs />
+                <ResourcesSection />
+                <Footer />
+              </div>
+            }
+          /> */}
+          <Route path="/apply" element={<ApplyPage />} />
+        </Routes>
       </div>
     </Router>
   );
