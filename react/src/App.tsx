@@ -12,6 +12,7 @@ import OurMissionSection from './components/OurMission';
 import ApplyPage from './components/ApplyPage';
 import Maintenance from './components/Maintenance';
 import AiRoadmapPdf from './components/AiRoadmapPdf';
+import AIResources from './components/LearningResourcesPage';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
               />
               <Route path="/apply" element={<ApplyPage />} />
               <Route path="/ai-roadmap" element={<AiRoadmapPdf />} />
+              <Route path="/ai-resources" element={<AIResources />} />
             </Routes>
           </>
         )}
