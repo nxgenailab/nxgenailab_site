@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ApplyForm from '../lib/applyform'; // Adjust the path if necessary
-import handleSubmit from '../lib/handlesubmit'; // Adjust the path if necessary
+import ApplyForm from '../lib/applyform';
+import handleSubmit from '../lib/handlesubmit';
 
 const AiRoadmapPdf: React.FC = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
