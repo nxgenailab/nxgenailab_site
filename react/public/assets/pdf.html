@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #0b0325; /* Dark futuristic background */
+            color: #64ffda; /* Teal accent color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden; /* Prevent horizontal scroll for animations */
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #f9ca24; /* Yellow accent for title */
+            text-shadow: 0 0 10px rgba(249, 202, 36, 0.7);
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+            text-align: center;
+            letter-spacing: 0.1em;
+            font-size: 2.5rem;
+        }
+
+        .logo {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        .logo img {
+            max-width: 240px;
+            height: auto;
+            /* filter: drop-shadow(0 0 5px #64ffda); Glow effect */
+        }
+
+        .roadmap {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 1000px;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .roadmap-item {
+            display: flex;
+            margin-bottom: 3rem;
+            background: linear-gradient(145deg, #1e1a3c, #150a2d); /* Subtle gradient */
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 5px 5px 15px #110723, -5px -5px 15px #1d0d27; /* Soft inner shadow */
+            border: 1px solid #2c134b;
+            position: relative;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .roadmap-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 1.5rem;
+        }
+
+        .roadmap-content h2 {
+            color: #bd93f9; /* Purple accent for headings */
+            margin-bottom: 0.75rem;
+            font-size: 1.6rem;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        .roadmap-content p {
+            color: #eee;
+            line-height: 1.7;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .roadmap-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1.2rem;
+        }
+
+        .roadmap-content ul li::before {
+            content: '●'; /* Futuristic bullet point */
+            color: #8be9fd; /* Cyan accent for list */
+            margin-right: 0.75rem;
+            font-size: 0.8em;
+        }
+
+        .roadmap-content ul li {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: #ddd;
+            opacity: 0.9;
+        }
+
+        .roadmap-icon {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-color: #fff; /* Changed to a vibrant pink */
+            color: #fff;
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 1.5rem;
+            box-shadow: 3px 3px 7px #160e2a, -3px -3px 7px #281c4c;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            opacity: 0.9;
+        }
+
+        .roadmap-icon img {
+            width: 70%;
+            height: 70%;
+            filter: drop-shadow(0 0 3px #8be9fd); /* Icon glow */
+        }
+
+        .roadmap-item:nth-child(odd) .roadmap-icon {
+            margin-left: 0;
+            margin-right: 1rem;
+        }
+
+/* Connector Line Styles - More Digital Look */
+        .roadmap::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            background: linear-gradient(to bottom, transparent, #64ffda, transparent); /* Glowing line */
+            height: calc(100% - 3rem);
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .roadmap-item::before,
+        .roadmap-item::after {
+            content: '';
+            position: absolute;
+            width: 0; /* Changed from 10px to 0 */
+            height: 0; /* Changed from 10px to 0 */
+            background-color: transparent; /* Changed from #64ffda to transparent */
+            border-radius: 50%;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .roadmap-item::before {
+            left: calc(50% - 2rem);
+        }
+
+        .roadmap-item::after {
+            right: calc(50% - 2rem);
+        }
+
+        .roadmap-item:nth-child(even)::before {
+            left: auto;
+            right: calc(50% - 2rem);
+        }
+
+        .roadmap-item:nth-child(even)::after {
+            right: auto;
+            left: calc(50% - 2rem);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo-white.png" alt="NXGEN AI LAB Logo" style="margin-top: 24px;">
+    </div>
+    <h1 style="color: #22ddd2; text-shadow: 0 0 8px rgba(0, 128, 128, 0.8);">AI Learning Roadmap 2025</h1>
+    <div class="roadmap">
+        <div class="roadmap-item">
+            <div class="roadmap-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo"/>
+            </div>
+            <div class="roadmap-content">
+                <h2>Python Programming Fundamentals</h2>
+                <p>Learn the basics of Python, the most popular language for AI development.  This section covers the core syntax, data structures, and control flow.</p>
+                <ul>
+                    <li><strong>Python syntax and structure:</strong>  Learn the basic building blocks of Python code, including keywords, operators, and how to structure a program.</li>
+                    <li><strong>Variables, data types, and operators:</strong>  Understand how to store and manipulate data using variables and various data types (numbers, strings, booleans) and perform operations using arithmetic, comparison, and logical operators.</li>
+                    <li><strong>Conditional statements and loops:</strong>  Learn to control the flow of execution using if/else statements and repeat code using for and while loops.</li>
+                    <li><strong>Functions and modular programming:</strong>  Write reusable code blocks using functions and organize code into modules for better management.</li>
+                    <li><strong>Lists, dictionaries, tuples, and sets:</strong>  Master Python's collection data types for storing and organizing data.</li>
+                    <li><strong>File I/O and error handling:</strong> Learn to read from and write to files, and handle errors and exceptions gracefully.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-item">
+            <div class="roadmap-icon">
+               <span style="font-size: 2.5rem; line-height: 1;">📊</span>
+            </div>
+            <div class="roadmap-content">
+                <h2>Data Handling & Visualization</h2>
+                <p>Master the skills to handle, clean, and visualize data effectively.  This section introduces you to essential tools and techniques for working with data.</p>
+                <ul>
+                    <li><strong>Understanding data types:</strong> Learn about different types of data, including numerical, categorical, and textual data, and how to represent them in Python.</li>
+                    <li><strong>Data manipulation with Pandas:</strong>  Use the Pandas library to efficiently manipulate data in tabular format (DataFrames).</li>
+                    <li><strong>Data cleaning techniques:</strong>  Learn to handle missing values, outliers, and inconsistencies in data.</li>
+                     <li><strong>Data visualization with Matplotlib and Seaborn:</strong>  Create informative visualizations using Matplotlib and Seaborn to explore data patterns.</li>
+                    <li><strong>Basic statistics and probability:</strong>  Understand fundamental statistical concepts and probability theory for data analysis.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-item">
+            <div class="roadmap-icon">
+                <span style="font-size: 3rem; line-height: 1;">🤖</span>
+            </div>
+            <div class="roadmap-content">
+                <h2>Foundations of Machine Learning</h2>
+                <p>Explore the core concepts and algorithms that power machine learning.  You'll learn the basic principles behind machine learning and implement your first models.</p>
+                <ul>
+                    <li><strong>Introduction to Machine Learning:</strong>  Understand what machine learning is, its applications, and its relationship to AI.</li>
+                    <li><strong>Supervised and Unsupervised Learning:</strong>  Learn the difference between supervised and unsupervised learning and when to use each.</li>
+                    <li><strong>Key ML algorithms:</strong>  Get hands-on experience with fundamental machine learning algorithms.</li>
+                    <li><strong>Model evaluation metrics:</strong>  Learn how to measure the performance of your machine learning models.</li>
+                    <li><strong>Introduction to Scikit-learn:</strong>  Get started with Scikit-learn, a powerful Python library for machine learning.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-item">
+            <div class="roadmap-icon">
+               <span style="font-size: 3rem; line-height: 1;">🧠</span>
+            </div>
+            <div class="roadmap-content">
+                <h2>Introduction to Deep Learning</h2>
+                <p>Dive into the world of neural networks and deep learning techniques.  This section covers the fundamentals of deep learning and how to build neural networks.</p>
+                <ul>
+                    <li><strong>Deep Learning fundamentals:</strong>  Learn about the core concepts of deep learning, including neural network architecture and training.</li>
+                    <li><strong>Artificial Neural Networks:</strong>  Understand how artificial neural networks are structured and how they work.</li>
+                    <li><strong>Activation functions and Backpropagation:</strong>  Learn about activation functions and the backpropagation algorithm, which is used to train neural networks.</li>
+                    <li><strong>Building Neural Networks with TensorFlow/Keras:</strong>  Build and train your own neural networks using TensorFlow and Keras.</li>
+                    <li><strong>Introduction to CNNs:</strong>  Get an introduction to Convolutional Neural Networks (CNNs) for image recognition.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-item">
+            <div class="roadmap-icon">
+                <span style="font-size: 2.5rem; line-height: 1;">📝</span>
+            </div>
+            <div class="roadmap-content">
+                <h2>Natural Language Processing (NLP)</h2>
+                <p>Learn how machines understand and process human language.  Explore the techniques that allow computers to work with text data.</p>
+                <ul>
+                    <li><strong>Introduction to NLP:</strong>  Learn about the field of Natural Language Processing and its applications.</li>
+                    <li><strong>Text preprocessing:</strong>  Learn how to clean and prepare text data for NLP tasks.</li>
+                    <li><strong>Text representation:</strong>  Understand how text is represented in a way that machines can understand.</li>
+                    <li><strong>Sentiment analysis and text classification:</strong>  Build models to analyze the sentiment of text and categorize text into different categories.</li>
+                    <li><strong>NLP libraries and tools:</strong>  Get introduced to popular Python libraries and tools for NLP.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-item">
+            <div class="roadmap-icon">
+                <span style="font-size: 3rem; line-height: 1;">📷</span>
+            </div>
+            <div class="roadmap-content">
+                <h2>Computer Vision</h2>
+                <p>Discover how machines can "see" and interpret visual information.  This section introduces the fundamental concepts and techniques in computer vision.</p>
+                <ul>
+                    <li><strong>Image processing basics:</strong>  Learn the basic techniques for processing and manipulating images.</li>
+                    <li><strong>Working with image data:</strong>  Understand how images are represented digitally and how to work with image data in Python.</li>
+                    <li><strong>CNNs for image recognition:</strong>  Learn how Convolutional Neural Networks (CNNs) are used for image recognition tasks.</li>
+                    <li><strong>Transfer learning:</strong>  Learn how to use pre-trained models to improve the performance of your computer vision models.</li>
+                    <li><strong>Applications of Computer Vision:</strong>  Explore various applications of computer vision, such as image classification, object detection, and image segmentation.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

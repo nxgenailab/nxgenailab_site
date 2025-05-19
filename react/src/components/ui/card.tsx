@@ -26,7 +26,7 @@ const CardDescription = ({ className, ...props }: React.HTMLAttributes<HTMLDivEl
 );
 
 // CardContent Component (defined inline)
-  const CardContent = ({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
+const CardContent = ({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
     <div className={cn("p-6 pt-0", className)} {...props}>
         {children}
     </div>

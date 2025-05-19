@@ -13,14 +13,16 @@ const Header = () => {
                     transition={{ duration: 0.8 }}
                     {...{ className: "flex items-center gap-2" }}
                 >
-                    <img src="/assets/HorizontalLogo.png" alt="NxGen AI Lab Logo" className="w-50 h-8" />
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/HorizontalLogo.png" alt="NxGen AI Lab Logo" className="w-50 h-8" />
+                    </a>
                     {/* <h1 className="text-2xl font-bold text-white">NxGen AI Lab</h1> */}
                 </motion.div>
                 <nav>
                     <ul className="flex space-x-6">
                         <li>
                             <a
-                                href="#workshops"
+                                href="/#workshops"
                                 className="text-gray-300 hover:text-white transition-colors duration-300 text-2xl"
                             >
                                 Workshops
@@ -28,7 +30,7 @@ const Header = () => {
                         </li>
                         <li>
                             <a
-                                href="#team"
+                                href="/#team"
                                 className="text-gray-300 hover:text-white transition-colors duration-300 text-2xl"
                             >
                                 Team
@@ -36,7 +38,7 @@ const Header = () => {
                         </li>
                         <li>
                             <a
-                                href="#resources"
+                                href="/#resources"
                                 className="text-gray-300 hover:text-white transition-colors duration-300 text-2xl"
                             >
                                 Resources

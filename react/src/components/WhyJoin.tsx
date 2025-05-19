@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BrainCircuit, Sparkles, Zap, Lightbulb } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { cn } from '../lib/utils';
 
@@ -20,24 +20,24 @@ const cardVariants = {
 const WhyJoin = () => {
     const workshops = [
         {
-            title: 'Introduction to Python for AI',
-            description: 'Learn the fundamentals of Python programming, a crucial language for AI development.',
-            icon: '🐍',
+            title: 'Explore the Future of Technology',
+            description: 'Explore how AI powers things like smart assistants and self-driving cars—and learn how to build your own!',
+            icon: '🔍',
         },
         {
-            title: 'Machine Learning Basics',
-            description: 'Dive into the core concepts of machine learning, including algorithms and applications.',
-            icon: <BrainCircuit className="w-7 h-7 text-[#22ddd2]" />,
+            title: 'Develop Critical Thinking & Problem-Solving',
+            description: 'Learn how to break big problems into small steps, analyze data, and think creatively—just like real AI developers do.',
+            icon: '🧠',
         },
         {
-            title: 'Deep Learning with TensorFlow',
-            description: 'Explore the power of deep learning using Google’s TensorFlow framework.',
-            icon: <Zap className="w-7 h-7 text-[#8c15e9]" />,
+            title: 'Stand Out in School & Beyond',
+            description: 'AI skills look great on college apps and resumes. Show you’re ready for the future of tech and innovation.',
+            icon: '💼',
         },
         {
-            title: 'AI in the Real World',
-            description: 'Understand how AI is applied in industries like healthcare, finance, and more.',
-            icon: <Lightbulb className="w-7 h-7 text-[#2e73e9]" />,
+            title: 'Turn Curiosity into Creation',
+            description: 'Don’t just learn—create! Design your own chatbots, smart tools, and fun AI apps with hands-on guidance.',
+            icon: '💡',
         },
     ];
 
@@ -69,9 +69,9 @@ const WhyJoin = () => {
                                     "bg-gradient-to-b from-white via-teal-50 to-purple-50"
                                 )}
                             >
-                                <div>
+                                <div className="flex flex-col items-center">
                                     <CardHeader>
-                                        <CardTitle className="text-5xl mb-6">
+                                        <CardTitle className="text-5xl mb-4 flex justify-center">
                                             {typeof workshop.icon === 'string' ? (
                                                 <span className="inline-block">{workshop.icon}</span>
                                             ) : (
@@ -80,7 +80,7 @@ const WhyJoin = () => {
                                         </CardTitle>
                                     </CardHeader>
                                     <CardContent>
-                                        <CardDescription className="text-2xl font-bold text-gray-800 mb-4">
+                                        <CardDescription className="text-2xl font-bold text-gray-800 mb-2">
                                             {workshop.title}
                                         </CardDescription>
                                         <p className="text-lg text-gray-600">{workshop.description}</p>

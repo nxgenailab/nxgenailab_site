@@ -11,6 +11,8 @@ import AboutUs from './components/AboutUs';
 import OurMissionSection from './components/OurMission';
 import ApplyPage from './components/ApplyPage';
 import Maintenance from './components/Maintenance';
+import AiRoadmapPdf from './components/AiRoadmapPdf';
+
 
 function App() {
   const isMaintenance = process.env.REACT_APP_MAINTENANCE_WINDOW === 'true';
@@ -45,6 +47,7 @@ function App() {
                 }
               />
               <Route path="/apply" element={<ApplyPage />} />
+              <Route path="/ai-roadmap" element={<AiRoadmapPdf />} />
             </Routes>
           </>
         )}
