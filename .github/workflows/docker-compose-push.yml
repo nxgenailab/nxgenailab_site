@@ -58,7 +58,6 @@ jobs:
           --platform=managed \
           --region=us-east1 \
           --allow-unauthenticated \
-          -port=8000 \
           --set-env-vars ENCODED_SECRET="$ENCODED_SECRET"
         shell: bash
       - name: Deploy React app to Google Cloud Storage
@@ -68,5 +67,4 @@ jobs:
           --platform=managed \
           --region=us-east1 \
           --allow-unauthenticated \
-          --port=8080
         shell: bash
