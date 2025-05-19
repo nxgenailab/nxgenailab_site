@@ -8,7 +8,7 @@ const AboutUs = () => {
         {
             name: 'Deep Shah',
             avatar: "assets/DP.png", // Example URL
-            bio: `Hi! I’m Deep, the creator of this NxGen AI Lab. I graduated from the University of Waterloo six years ago 
+            bio: `Hi! I’m Deep, the creator of the NxGen AI Lab. I graduated from the University of Waterloo six years ago 
             and have since gained 5 years of experience in AI and Machine Learning. I’m passionate about teaching and 
             empowering the next generation of innovators. I’ve had the chance to speak at institutions like Toronto 
             Metropolitan University and North Toronto Collegiate Institute, sharing how AI is shaping 
