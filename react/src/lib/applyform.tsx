@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface ApplyFormProps {
-    onSubmit: (formData: { name: string; email: string }) => void;
+    onSubmit: (formData: { name: string; email: string }) => Promise<any> | void;
 }
 
 export default function ApplyForm({ onSubmit }: ApplyFormProps) {
@@ -11,11 +11,21 @@ export default function ApplyForm({ onSubmit }: ApplyFormProps) {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        onSubmit(formData);
+        const result = onSubmit(formData);
+        if (result instanceof Promise) {
+            try {
+                await result;
+                setFormData({ name: '', email: '' });
+            } catch {
+                // handle error if needed
+            }
+        } else {
+            setFormData({ name: '', email: '' });
+        }
     };
-
+    
     return (
         <form onSubmit={handleSubmit} className="space-y-5">
             <div>

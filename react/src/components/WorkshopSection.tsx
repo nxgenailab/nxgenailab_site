@@ -15,11 +15,6 @@ const WorkshopSection = () => {
             description: 'Dive into the core concepts of machine learning, including algorithms and applications.',
             icon: '🤖',
         },
-        // {
-        //     title: 'Deep Learning with TensorFlow',
-        //     description: 'Explore the power of deep learning using Google’s TensorFlow framework.',
-        //     icon: <Zap className="w-6 h-6" />,
-        // },
         {
             title: 'Computer Vision',
             description: 'Discover how AI can "see" and interpret images and videos.',
@@ -30,11 +25,6 @@ const WorkshopSection = () => {
             description: 'Learn how AI understands and processes human language.',
             icon: '🗣️', 
         },
-        // {
-        //     title: 'AI Ethics and Society',
-        //     description: 'Discuss the ethical implications and societal impact of artificial intelligence.',
-        //     icon: <Users className="w-6 h-6" />,
-        // },
     ];
 
     return (
@@ -47,18 +37,18 @@ const WorkshopSection = () => {
                     Our Upcoming <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-500">Workshops!!</span>
                 </h2>
 
-                <div className="flex flex-col md:flex-row items-center justify-between">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                     {/* Left Section: Image */}
                     <div className="md:w-1/2 flex justify-center mb-10 md:mb-0">
                         <img 
                             src="assets/AIWorkshop.png" 
                             alt="Descriptive Alt Text" 
-                            className="w-half max-w-xl rounded-2xl shadow-lg"
+                            className="w-full max-w-xl rounded-2xl shadow-lg"
                         />
                     </div>
 
                     {/* Right Section: Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:w-1/2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:w-1/2">
                         {workshops.map((workshop, index) => (
                             <motion.div
                                 key={index}

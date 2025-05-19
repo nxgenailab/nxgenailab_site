@@ -24,7 +24,7 @@ const AiRoadmapPdf: React.FC = () => {
         <div>
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-500 to-teal-400">
             <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-md">
-                <h1 className="text-3xl font-bold mb-6 text-center text-black">Downaload Detail AI Learning Roadmap</h1>
+                <h1 className="text-3xl font-bold mb-6 text-center text-black">Download Detail AI Learning Roadmap</h1>
             {!isSubmitted ? (
                 <ApplyForm onSubmit={handleCombinedSubmit} />
             ) : (

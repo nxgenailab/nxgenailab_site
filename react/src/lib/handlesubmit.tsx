@@ -1,5 +1,7 @@
-
-const handleSubmit = async (formData: { name: string; email: string }): Promise<Response | undefined> => {
+const handleSubmit = async (
+    formData: { name: string; email: string },
+    formElement?: HTMLFormElement
+): Promise<Response | undefined> => {
         try {
             const response = await fetch("https://nxgenailab-site-fastapi-751892319793.us-east1.run.app/submit", {
                 method: "POST",
@@ -8,10 +10,10 @@ const handleSubmit = async (formData: { name: string; email: string }): Promise<
                 },
                 body: JSON.stringify(formData),
             });
-
             if (response.ok) {
                 const data = await response.json();
                 console.log("Form submitted successfully:", data);
+
                 // Show a fancy popup with a green tick mark and a message
                 const popup = document.createElement('div');
                 popup.style.position = 'fixed';
@@ -47,12 +49,15 @@ const handleSubmit = async (formData: { name: string; email: string }): Promise<
                 document.body.appendChild(popup);
 
                 setTimeout(() => {
-                    popup.style.transition = 'opacity 0.4s';
+                    popup.style.transition = 'opacity 0.2s';
                     popup.style.opacity = '0';
                     setTimeout(() => {
                         document.body.removeChild(popup);
-                    }, 400);
-                }, 1800);
+                    }, 300);
+                }, 1000);
+                if (formElement && typeof formElement.reset === 'function') {
+                    formElement.reset();
+                }
             } else {
                 console.error("Error submitting form:", response.statusText);
                 // Show a fancy popup with a red cross mark and a message
@@ -90,12 +95,12 @@ const handleSubmit = async (formData: { name: string; email: string }): Promise<
                 document.body.appendChild(popup);
 
                 setTimeout(() => {
-                    popup.style.transition = 'opacity 0.4s';
+                    popup.style.transition = 'opacity 0.2s';
                     popup.style.opacity = '0';
                     setTimeout(() => {
                         document.body.removeChild(popup);
-                    }, 400);
-                }, 1800);
+                    }, 300);
+                }, 1000);
             }
             return response;
         } catch (error) {
@@ -134,13 +139,13 @@ const handleSubmit = async (formData: { name: string; email: string }): Promise<
 
             document.body.appendChild(popup);
 
-            setTimeout(() => {
-                popup.style.transition = 'opacity 0.4s';
-                popup.style.opacity = '0';
                 setTimeout(() => {
-                    document.body.removeChild(popup);
-                }, 400);
-            }, 1800);
+                    popup.style.transition = 'opacity 0.2s';
+                    popup.style.opacity = '0';
+                    setTimeout(() => {
+                        document.body.removeChild(popup);
+                    }, 300);
+                }, 1000);
             return undefined;
         }
     };
