@@ -47,7 +47,7 @@ const Footer = () => {
 
             <div className="flex items-center mb-1 space-x-2"> {/* Reduced mb-2 to mb-1 */}
                 <Mail className="w-5 h-5" />
-                <span>nxgencoders@gmail.com</span>
+                <span>info@nxgenailab.com</span>
             </div>
 
             <a
