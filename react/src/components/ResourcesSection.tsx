@@ -18,7 +18,7 @@ const ResourcesSection = () => {
             description: 'A curated PDF guide of the best books to learn AI.',
             link: '/ai-resources',
             icon: '📚',
-            buttonTitle: 'Download PDF',
+            buttonTitle: 'Learn More',
         },
         // {
         //     title: 'GitHub Projects',

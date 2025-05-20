@@ -19,7 +19,12 @@ const OurMissionSection = () => {
                         Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-500">Mission</span>
                     </h2>
                     <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                        At NxGen AI Lab, our mission is to **empower teenagers** with the skills, confidence, and ethical mindset needed to thrive in an AI-driven world. We believe that **AI education should be fun, accessible, and purposeful**—giving students the tools to build impactful solutions, question the world around them, and shape a better future through innovation.
+                        At NxGen AI Lab, our mission is to <b>empower teenagers</b> with the skills, confidence, 
+                        and ethical mindset needed to thrive in an AI-driven world. We believe that 
+                        <b>AI education should be fun, accessible, and purposeful</b>, 
+                        giving students the tools to build impactful solutions, 
+                        question the world around them, and shape 
+                        a better future through innovation.
                     </p>
                 </motion.div>
 

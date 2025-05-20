@@ -12,7 +12,7 @@ const HeroSection = () => {
     };
 
     return (
-        <section className="py-8 md:py-24 bg-gradient-to-b">
+        <section className="py-8 md:py-20 bg-gradient-to-b">
             <div className="container mx-auto max-w-screen-lg flex flex-col md:flex-row items-center justify-between px-6 md:px-0">
                 
                 {/* Left Column: Logo + Tagline + Mission */}
@@ -65,9 +65,9 @@ const HeroSection = () => {
                                 shadow-2xl hover:shadow-3xl flex items-center gap-3 text-lg md:text-xl mx-auto font-bold"
                             onClick={handleRegisterClick} // Add onClick handler
                         >
-                            <Sparkles className="w-6 h-6" />
-                            Register for Webinar!
-                            <ArrowRight className="w-6 h-6 ml-3" />
+                            <Sparkles className="w-9 h-9" />
+                            Register Today!!
+                            <ArrowRight className="w-9 h-9 ml-3" />
                         </Button>
                     </motion.div>
                 </motion.div>
