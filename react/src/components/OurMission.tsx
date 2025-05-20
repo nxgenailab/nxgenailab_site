@@ -4,7 +4,7 @@ import { Target } from 'lucide-react';
 
 const OurMissionSection = () => {
     return (
-        <section className="py-20 md:py-28 bg-[#f9f9fb]">
+        <section id='our-mission' className="py-20 md:py-28 bg-[#f9f9fb]">
             <div className="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-12">
                 {/* Left: Mission Content */}
                 <motion.div

@@ -47,12 +47,20 @@ const Header = () => {
                                 Resources
                             </a>
                         </li>
+                        <li>
+                            <a
+                                href="#footer"
+                                className="text-gray-300 hover:text-white transition-colors duration-300 text-2xl"
+                            >
+                                Contact Us
+                            </a>
+                        </li>
                     </ul>
                 </nav>
 
                 {/* Mobile Burger Icon */}
                 <button
-                    className="sm:hidden flex items-center text-gray-300 ml-4" // Added ml-4
+                    className="sm:hidden flex items-center text-gray-300 ml-4"
                     onClick={() => setMenuOpen(!menuOpen)}
                     aria-label="Toggle menu"
                 >
@@ -88,6 +96,15 @@ const Header = () => {
                                     onClick={() => setMenuOpen(false)}
                                 >
                                     Resources
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#footer"
+                                    className="text-gray-300 hover:text-white transition-colors duration-300 text-base px-2 py-1 w-full text-center"
+                                    onClick={() => setMenuOpen(false)}
+                                >
+                                    Contact Us
                                 </a>
                             </li>
                         </ul>

@@ -42,7 +42,7 @@ const WhyJoin = () => {
     ];
 
     return (
-        <section id="workshops" className="py-20 md:py-28 bg-white">
+        <section id="why-join" className="py-20 md:py-28 bg-white">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl md:text-6xl font-extrabold text-center text-gray-900 mb-16">
                     <Sparkles className="inline-block w-12 h-12 mr-2 text-teal-400" />
