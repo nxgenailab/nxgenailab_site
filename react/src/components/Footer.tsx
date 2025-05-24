@@ -50,12 +50,24 @@ const Footer = () => {
                 <span>info@nxgenailab.com</span>
             </div>
 
+            <div>
             <a
+                href="https://instagram.com/nxgen.ai.lab"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center mb-1 space-x-2 hover:underline"
+            >
+                <Instagram className="w-5 h-5" />
+                <span>@nxgen.ai.lab</span>
+            </a>
+            </div>
+
+            {/* <a
                 href="/terms-and-conditions"
                 className="text-sm underline hover:text-white"
             >
                 Terms and Conditions
-            </a>
+            </a> */}
         </div>
 
         {/* CENTER: Email Signup */}
@@ -69,7 +81,7 @@ const Footer = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    placeholder="you@example.com"
+                    // placeholder="you@example.com"
                     className="flex-1 px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button

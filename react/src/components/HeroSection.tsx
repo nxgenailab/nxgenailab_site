@@ -44,14 +44,17 @@ const HeroSection = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     {...{className:"md:w-1/2 bg-[#17072b] bg-opacity-70 p-8 rounded-2xl shadow-lg text-center max-w-md md:ml-12 my-8 md:my-12"}}
                 >
+                    <h3 className="text-2xl md:text-3xl font-bold text-white">
+                        Upcoming Workshop:
+                    </h3>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                        Upcoming Workshop: Mastering AI in 2025
+                        Basics of AI
                     </h3>
                     <p className="text-lg md:text-xl text-gray-300 mb-6">
-                        Join us for a <span className="text-teal-300 font-bold">FREE!!</span> and exclusive webinar! Limited spots available.
+                        <span className="text-teal-300 text-2xl font-bold">July 1st, 2025</span>
                     </p>
                     <p className="text-lg md:text-xl text-gray-300 mb-6">
-                        For Ages 16–19
+                        For Ages 15–19
                     </p>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.5 }}

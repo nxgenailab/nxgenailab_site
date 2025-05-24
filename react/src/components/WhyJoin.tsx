@@ -20,6 +20,11 @@ const cardVariants = {
 const WhyJoin = () => {
     const workshops = [
         {
+            title: 'Stand Out in School & Beyond',
+            description: 'AI skills look great on college applications and resumes. Show you’re ready for the future of tech and innovation.',
+            icon: '💼',
+        },
+        {
             title: 'Explore the Future of Technology',
             description: 'Explore how AI powers things like smart assistants and self-driving cars—and learn how to build your own!',
             icon: '🔍',
@@ -28,11 +33,6 @@ const WhyJoin = () => {
             title: 'Develop Critical Thinking & Problem-Solving',
             description: 'Learn how to break big problems into small steps, analyze data, and think creatively—just like real AI developers do.',
             icon: '🧠',
-        },
-        {
-            title: 'Stand Out in School & Beyond',
-            description: 'AI skills look great on college apps and resumes. Show you’re ready for the future of tech and innovation.',
-            icon: '💼',
         },
         {
             title: 'Turn Curiosity into Creation',

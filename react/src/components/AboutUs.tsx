@@ -24,7 +24,7 @@ const AboutUs = () => {
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl md:text-6xl font-extrabold text-center text-gray-900 mb-5">
                     <User2 className="inline-block w-12 h-12 mr-2 text-teal-400" />
-                    Meet the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22ddd2] to-[#8c15e9]">Course Instructor</span>
+                    Meet your<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22ddd2] to-[#8c15e9]"> Mentor</span>
                 </h2>
                 <div className="flex justify-center">
                     {teamMembers.map((member, index) => (
