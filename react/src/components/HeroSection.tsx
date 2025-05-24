@@ -44,11 +44,11 @@ const HeroSection = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     {...{className:"md:w-1/2 bg-[#17072b] bg-opacity-70 p-8 rounded-2xl shadow-lg text-center max-w-md md:ml-12 my-8 md:my-12"}}
                 >
-                    <h3 className="text-2xl md:text-3xl font-bold text-white">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                         Upcoming Workshop:
                     </h3>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                        Basics of AI
+                        Intro to AI & Machine Learning
                     </h3>
                     <p className="text-lg md:text-xl text-gray-300 mb-6">
                         <span className="text-teal-300 text-2xl font-bold">July 1st, 2025</span>
