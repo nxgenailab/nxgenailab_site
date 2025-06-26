@@ -45,13 +45,13 @@ const HeroSection = () => {
                     {...{className:"md:w-1/2 bg-[#17072b] bg-opacity-70 p-8 rounded-2xl shadow-lg text-center max-w-md md:ml-12 my-8 md:my-12"}}
                 >
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                        Upcoming Workshop:
+                        Upcoming Webinar:
                     </h3>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                        Intro to AI & Machine Learning
+                        AI Roadmap for Teens!
                     </h3>
                     <p className="text-lg md:text-xl text-gray-300 mb-6">
-                        <span className="text-teal-300 text-2xl font-bold">July 1st, 2025</span>
+                        <span className="text-teal-300 text-2xl font-bold">Aug 2nd, 2025 | Saturday</span>
                     </p>
                     <p className="text-lg md:text-xl text-gray-300 mb-6">
                         For Ages 15–19
