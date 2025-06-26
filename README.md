@@ -1,1 +1,1 @@
-# nxgenailab_site
+# NxGen AI Lab
