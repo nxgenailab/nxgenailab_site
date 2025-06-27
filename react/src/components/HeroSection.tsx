@@ -32,7 +32,7 @@ const HeroSection = () => {
                             className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-purple-400 mb-6 block"
                             style={{ fontFamily: "'Codec Pro', sans-serif" }}
                         >
-                            Future-Proofing the Next Generation with AI Learning
+                            Creating the Next Generation of AI Innovators
                         </span>
                     </motion.div>
                 </div>
