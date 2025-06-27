@@ -20,6 +20,13 @@ jobs:
           echo "ENCODED_SECRET=$ENCODED_SECRET" >> $GITHUB_ENV
         shell: bash
 
+      - name: Install dependencies and build React app
+        run: |
+          cd react
+          npm install
+          npm run build
+        shell: bash
+
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 

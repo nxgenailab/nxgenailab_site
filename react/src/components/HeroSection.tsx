@@ -45,7 +45,7 @@ const HeroSection = () => {
                     {...{className:"md:w-1/2 bg-[#17072b] bg-opacity-70 p-8 rounded-2xl shadow-lg text-center max-w-md md:ml-12 my-8 md:my-12"}}
                 >
                     <h3 className="text-xl md:text-2xl font-medium text-white mb-2">
-                        Upcoming Webinar:
+                        Upcoming Webinar :
                     </h3>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                         AI Roadmap for Teens !
