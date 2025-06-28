@@ -51,7 +51,9 @@ const HeroSection = () => {
                         AI Roadmap for Teens !
                     </h3>
                     <p className="text-lg md:text-xl text-gray-300 mb-6">
-                        <span className="text-teal-300 text-2xl font-bold">Aug 2nd, 2025 | Saturday</span>
+                        <span className="text-teal-300 text-2xl font-bold">
+                            Saturday | Jul 26<sup>th</sup>, 2025
+                        </span>
                     </p>
                     <p className="text-lg md:text-xl text-gray-300 mb-6">
                         For Ages 15–19
