@@ -40,10 +40,10 @@ const Footer = () => {
         <div className="mb-8 md:mb-0">
             <h3 className="text-sm font-semibold mb-4">Contact Us</h3>
             
-            {/* <div className="flex items-center mb-1 space-x-2"> */}
-                {/* <Phone className="w-5 h-5" /> */}
-                {/* <span>+1 (555) 123-4567</span> */}
-            {/* </div> */}
+            <div className="flex items-center mb-1 space-x-2">
+                <Phone className="w-5 h-5" />
+                <span>+1 (647) 849-9492</span>
+            </div>
 
             <div className="flex items-center mb-1 space-x-2"> {/* Reduced mb-2 to mb-1 */}
                 <Mail className="w-5 h-5" />
