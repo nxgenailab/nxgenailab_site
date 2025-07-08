@@ -1,3 +1,4 @@
+from typing import Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware  # Import CORSMiddleware
 from pydantic import BaseModel
@@ -21,8 +22,15 @@ app.add_middleware(
 
 # Define the data model for form submission
 class FormData(BaseModel):
-    name: str
-    email: str
+    name: Optional[str] = None
+    email: Optional[str] = None
+    phone: Optional[str] = None
+    age: Optional[str] = None
+    occupation: Optional[str] = None
+    city: Optional[str] = None
+    aiFamiliarity: Optional[str] = None
+    aiInterest: Optional[str] = None
+    aiTopics: Optional[list] = None
 
 # Google Sheets API setup (Service Account)
 SHEET_ID = '1fsUVSKD-t9ynB22oIGtP5uFbfzt_NCKs8LV1nYOYVYs'  # Replace with your Google Sheets ID
@@ -58,7 +66,17 @@ async def submit_form(data: FormData):
         service = get_sheets_service()
 
         # Prepare the data to append (name, email)
-        values = [[data.name, data.email]]
+        values = [[
+            data.name,
+            data.email,
+            data.phone,
+            data.age,
+            data.occupation,
+            data.city,
+            data.aiFamiliarity,
+            data.aiInterest,
+            ",".join(data.aiTopics) if data.aiTopics else None,
+        ]]
 
         # Call the Sheets API to append data
         request = service.spreadsheets().values().append(
