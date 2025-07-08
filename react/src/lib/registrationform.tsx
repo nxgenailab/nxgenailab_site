@@ -112,7 +112,7 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
                     <h3 className="text-xl font-bold text-teal-700 mb-3">👤 Who Are You, Really?</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label className="block text-base font-semibold text-gray-800 mb-1" htmlFor="name">Student Name</label>
+                            <label className="block text-base font-semibold text-gray-800 mb-1" htmlFor="name">Name</label>
                             <input
                                 type="text"
                                 name="name"

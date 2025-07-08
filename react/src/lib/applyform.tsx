@@ -29,7 +29,7 @@ export default function ApplyForm({ onSubmit }: ApplyFormProps) {
     return (
         <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="name">Student Name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="name">Name</label>
                 <input
                     type="text"
                     name="name"
@@ -41,7 +41,7 @@ export default function ApplyForm({ onSubmit }: ApplyFormProps) {
                 />
             </div>
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">Student Email</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">Email</label>
                 <input
                     type="email"
                     name="email"
