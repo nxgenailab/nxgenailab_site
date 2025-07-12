@@ -100,7 +100,7 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
                 onSubmit={handleSubmit}
                 className="space-y-8 bg-white rounded-xl shadow-lg p-8 border border-gray-100"
             >
-                <h2 className="text-2xl font-bold text-teal-700 mb-4 text-center">AI Education Registration</h2>
+                {/* <h2 className="text-2xl font-bold text-teal-700 mb-4 text-center">AI Education Registration</h2> */}
                 {success && (
                     <div className="mb-4 p-3 rounded bg-green-100 text-green-700 text-center font-medium">
                         Thank you! Your application has been submitted.
@@ -109,7 +109,7 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
 
                 {/* Personal Info */}
                 <div>
-                    <h3 className="text-xl font-bold text-teal-700 mb-3">👤 Who Are You, Really?</h3>
+                    <h3 className="text-xl font-bold text-teal-700 mb-3">👋 Let's Get to Know You!</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-base font-semibold text-gray-800 mb-1" htmlFor="name">Name</label>
@@ -234,12 +234,18 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
 
                 {/* AI Familiarity */}
                 <div>
-                    <h3 className="text-xl font-bold text-teal-700 mb-3">🤖 AI & You: A Love Story?</h3>
-                    <label className="block text-base font-semibold text-gray-800 mb-1">
-                        How familiar are you (or your child/student) with Artificial Intelligence?
-                    </label>
+                    <h3 className="text-xl font-bold text-teal-700 mb-3">🤖 How familiar are you with Artificial Intelligence?</h3>
+                    {/* <label className="block text-base font-semibold text-gray-800 mb-1">
+                        How familiar are you with Artificial Intelligence?
+                    </label> */}
                     <div className="space-y-1">
-                        {["Never heard of it", "Heard of it, but don’t know much", "Know a little bit", "Very familiar"].map(option => (
+                        {[
+                            "Heard of it, that’s all",
+                            "I use ChatGPT daily",
+                            "I play with many AI apps/tools",
+                            "I build things with AI",
+                            "I teach others about AI"
+                        ].map(option => (
                             <label key={option} className="flex items-center cursor-pointer hover:text-teal-600">
                                 <input
                                     type="radio"
@@ -258,10 +264,10 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
 
                 {/* AI Interest */}
                 <div>
-                    <h3 className="text-xl font-bold text-teal-700 mb-3">🧠 Why AI? (No Wrong Answers!)</h3>
-                    <label className="block text-base font-semibold text-gray-800 mb-1">
+                    <h3 className="text-xl font-bold text-teal-700 mb-3">🧠 Why are you interested in AI education?</h3>
+                    {/* <label className="block text-base font-semibold text-gray-800 mb-1">
                         Why are you interested in AI education?
-                    </label>
+                    </label> */}
                     <div className="space-y-1">
                         {["Career opportunities", "Academic interest", "Want to keep up with the future", "Just curious", "Other"].map(option => (
                             <label key={option} className="flex items-center cursor-pointer hover:text-teal-600">
@@ -293,10 +299,10 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
 
                 {/* AI Topics */}
                 <div>
-                    <h3 className="text-xl font-bold text-teal-700 mb-3">🚀 Pick Your AI Adventure!</h3>
-                    <label className="block text-base font-semibold text-gray-800 mb-1">
-                        What topics in AI are most interesting to you or your child? (Select all that apply)
-                    </label>
+                    <h3 className="text-xl font-bold text-teal-700 mb-3">🚀 What topics in AI are most interesting to you? (Select all that apply)</h3>
+                    {/* <label className="block text-base font-semibold text-gray-800 mb-1">
+                        What topics in AI are most interesting to you child? (Select all that apply)
+                    </label> */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         {[
                             "AI & ChatGPT",
