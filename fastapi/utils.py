@@ -45,10 +45,10 @@ async def send_email(data):
     try:
         msg = MIMEMultipart()
         msg.set_unixfrom('author')
-        msg['From'] = 'info@nxgenailab.com' 
-        msg['To'] = data.email
+        msg['From'] = 'info@nxgenailab.com'
         if not data.email:
             raise ValueError("Email address is required")
+        msg['To'] = data.email
         msg['Reply-To'] = 'info@nxgenailab.com'
         msg['Subject'] = 'You’re In! 🚀 Get Ready for the  NxGen AI Roadmap Webinar'
         
