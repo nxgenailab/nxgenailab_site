@@ -69,7 +69,7 @@ async def send_email(data):
 
         server = smtplib.SMTP("smtp.office365.com", 587)
         server.starttls()
-        response = server.login(msg['From'], "Kadnam#b1")
+        response = server.login(msg['From'], os.getenv("EMAIL_PASSWORD", ""))
         if response[0] == 235:
             print("Login successful!")
         else:
